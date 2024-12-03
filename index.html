@@ -85,9 +85,10 @@
 <body class="home">
 <!-- Botão fixo no canto inferior esquerdo para abrir o modal -->
 <button id="openModal" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal" 
-        style="position: fixed; bottom: 20px; left: 20px; z-index: 1050; border-radius: 50%; 
-               padding: 20px; width: 60px; height: 60px; display: flex; justify-content: center; align-items: center; 
+        style="position: fixed; bottom: 60px; right: 60px; z-index: 1050; border-radius: 50%; 
+               padding: 10px; width: 80px; height: 80px; display: flex; justify-content: center; align-items: center; 
                background-image: url('logo.png'); background-size: cover; border: none;">
+              <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 512.001 512.001" style="width: 50px ; height:50px; enable-background:new 0 0 512.001 512.001" xml:space="preserve"><path style="fill:#ff6464" d="m413.766 377.369-106.833-61.511a26.454 26.454 0 0 0-31.905 4.22l-21.042 21.042c-8.111 8.111-21.025 8.847-29.961 1.657-16.498-13.276-32.988-28.048-49.11-44.169s-30.893-32.611-44.169-49.11c-7.19-8.936-6.454-21.85 1.657-29.961l21.043-21.043a26.453 26.453 0 0 0 4.22-31.903L96.154 59.757c-8.686-15.084-29.321-17.814-41.629-5.506L22.816 85.959C-18.506 127.28 29.647 242.43 130.37 343.152s215.872 148.875 257.193 107.554l31.708-31.708c12.309-12.307 9.579-32.943-5.505-41.629z"/><path style="fill:#d2555a" d="m45.603 63.172 88.848 154.316 18.993-18.993a26.45 26.45 0 0 0 4.219-31.903L96.154 59.757c-8.686-15.084-29.321-17.814-41.63-5.506l-8.921 8.921zM410.351 427.92l8.921-8.921c12.308-12.308 9.578-32.945-5.506-41.629l-106.833-61.511a26.454 26.454 0 0 0-31.905 4.22l-19.488 19.487 154.811 88.354z"/><path style="fill:#e4eaf6" d="M469.779 63.603H264.55c-18.813 0-34.205 15.392-34.205 34.205v119.717c0 18.813 15.392 34.205 34.205 34.205h111.166v32.434c0 3.81 4.606 5.716 7.298 3.023l35.458-35.458h51.307c18.813 0 34.205-15.392 34.205-34.205V97.806c-.001-18.811-15.393-34.203-34.205-34.203z"/><path d="m417.766 370.421-106.834-61.51c-13.478-7.761-30.575-5.501-41.573 5.498l-21.042 21.042c-5.239 5.238-13.522 5.703-19.267 1.08-16.56-13.326-32.868-27.992-48.466-43.592s-30.265-31.906-43.592-48.466c-4.623-5.745-4.159-14.029 1.08-19.267l21.043-21.042c10.998-10.998 13.259-28.093 5.498-41.573L103.102 55.757c-5.394-9.369-14.635-15.556-25.353-16.973-10.716-1.419-21.249 2.154-28.893 9.799L17.147 80.29c-22.436 22.436-22.869 63.308-1.217 115.083 20.708 49.518 59.337 104.014 108.771 153.448s103.93 88.063 153.448 108.771c25.405 10.624 48.182 15.93 67.447 15.93 19.997 0 36.209-5.72 47.637-17.147l31.708-31.708c7.645-7.645 11.216-18.176 9.799-28.893-1.418-10.718-7.605-19.958-16.974-25.353zM73.181 54.516c.817 0 1.641.053 2.466.162 5.733.758 10.675 4.067 13.56 9.078l61.51 106.833c4.151 7.211 2.942 16.353-2.941 22.235l-11.598 11.598L55.616 64.496l4.576-4.576c3.501-3.5 8.131-5.404 12.989-5.404zm308.714 390.523c-17.281 17.28-52.839 16.463-97.56-2.238-47.637-19.921-100.302-57.323-148.296-105.316-47.992-47.994-85.395-100.66-105.315-148.296-18.701-44.722-19.517-80.281-2.238-97.56l15.39-15.39 80.657 140.09c-8.916 11.05-9.103 26.926-.033 38.197 13.686 17.008 28.741 33.747 44.746 49.752s32.744 31.06 49.752 44.746c11.086 8.92 26.624 8.886 37.646.403l140.613 80.251-15.362 15.361zm31.708-31.708-4.593 4.593-140.375-80.115 12.061-12.061c5.882-5.882 15.026-7.092 22.235-2.941l106.834 61.51c5.011 2.885 8.319 7.828 9.078 13.56.759 5.732-1.151 11.364-5.24 15.454z"/><path d="M469.779 55.586H264.55c-23.281 0-42.222 18.941-42.222 42.222v119.717c0 23.281 18.941 42.222 42.222 42.222h103.149v34.739a8.015 8.015 0 0 0 8.016 8.016 8.02 8.02 0 0 0 5.671-2.348l40.408-40.408h47.987c23.281 0 42.222-18.941 42.222-42.222V97.808c-.003-23.281-18.944-42.222-42.224-42.222zm26.188 161.938c0 14.44-11.748 26.188-26.188 26.188h-51.307a8.01 8.01 0 0 0-5.668 2.348l-29.071 29.071v-23.402a8.017 8.017 0 0 0-8.017-8.017H264.55c-14.44 0-26.188-11.748-26.188-26.188V97.808c0-14.44 11.748-26.188 26.188-26.188h205.229c14.44 0 26.188 11.748 26.188 26.188v119.716z"/><path d="M273.101 114.375h25.654a8.017 8.017 0 0 0 0-16.034h-25.654a8.017 8.017 0 0 0 0 16.034zM461.227 98.342H332.959a8.017 8.017 0 0 0 0 16.034h128.268a8.017 8.017 0 0 0 0-16.034zM461.227 132.547H273.101a8.017 8.017 0 0 0 0 16.034h188.126a8.017 8.017 0 0 0 0-16.034zM273.101 182.785h128.268a8.017 8.017 0 0 0 0-16.034H273.101a8.017 8.017 0 0 0 0 16.034zM461.227 166.752h-25.654a8.017 8.017 0 0 0 0 16.034h25.654a8.017 8.017 0 0 0 0-16.034zM461.227 200.956H273.101a8.017 8.017 0 0 0 0 16.034h188.126a8.017 8.017 0 0 0 0-16.034z"/></svg>
 </button>
 
 <!-- Modal -->
@@ -136,14 +137,14 @@
                             <option value="Outras Informações">Outras Informações</option>
                         </select>
                     </div>
-                    <button type="submit">Enviar</button>
+                    <div style="display: flex; margin-top: 10px;">
+                        <button type="submit">Enviar</button>
+                        <button type="button"  data-dismiss="modal" aria-label="Close">Fechar</button>
+                    </div>
+                    
                 </form>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-primary text-danger" data-dismiss="modal" aria-label="Close">Fechar</button>
-                <button type="submit" class="btn btn-primary"  onclick="submit()">Enviar</button>
-            </div>
-       
+        
         </div>
     </div>
 </div>
@@ -173,7 +174,7 @@
                         </button>
                         <div class="lgx-logo">
                             <a href="index.html" class="lgx-scroll">
-                                <img src="assets/img/logo.png" alt="bbh logo" style="width: 80px; height: auto;"/>
+                                <img src="assets/img/logo.png" alt="bbh logo" style="width: 100px; height: 100px;"/>
                             </a>
                         </div>
                     </div>
@@ -181,9 +182,9 @@
                         <ul class="nav navbar-nav lgx-nav navbar-right">
                            
                             <li><a class="lgx-scroll" href="#lgx-home">Home</a></li>
-                            <li><a class="lgx-scroll" href="#lgx-speakers">Equipa</a></li>
+                            <!-- <li><a class="lgx-scroll" href="#lgx-speakers">Equipa</a></li> -->
                             <li><a class="lgx-scroll" href="#lgx-schedule">Ajuda</a></li>
-                            <li><a class="lgx-scroll" href="#lgx-sponsors">Patricionadores</a></li>
+                            <!-- <li><a class="lgx-scroll" href="#lgx-sponsors">Patricionadores</a></li> -->
                             <li><a class="lgx-scroll" href="#lgx-registration">Sabia</a></li>
                             <li><a class="lgx-scroll" href="#lgx-testimonial">Testemunhos</a></li>
                         </ul>
@@ -252,11 +253,7 @@
                             <div
                               class="action-area lgx-delay lgx-fadeInDown"
                             >
-                              <div class="lgx-video-area">
-                                <a class="lgx-btn lgx-btn-red" href="#"
-                                  >Dê inicio à sua aventura!</a
-                                >
-                              </div>
+                              
                             </div>
                           </div>
                         </div>
@@ -296,11 +293,7 @@
                               <div
                                 class="action-area lgx-delay lgx-fadeInDown"
                               >
-                                <div class="lgx-video-area">
-                                  <a class="lgx-btn lgx-btn-red" href="#"
-                                    >Dê inicio à sua aventura!</a
-                                  >
-                                </div>
+                                
                               </div>
                             </div>
                           </div>
@@ -344,14 +337,7 @@
                 </div>
                 <div class="lgx-about-content">
                   <p>A cada cliente atribuímos um gestor de processo, o que torna tudo mais fácil e mais rápido e que o aconselha sobre todas as decisões que serão necessárias nesta nova etapa.</p>
-                  <div class="section-btn-area">
-                    <a class="lgx-btn" href="about.html">More About</a>
-                    <a
-                      class="lgx-btn lgx-btn-red lgx-scroll"
-                      href="#lgx-registration"
-                      >Buy Ticket</a
-                    >
-                  </div>
+                  
                 </div>
               </div>
             </div>
