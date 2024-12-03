@@ -83,7 +83,72 @@
 </head>
 
 <body class="home">
+<!-- Botão fixo no canto inferior esquerdo para abrir o modal -->
+<button id="openModal" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal" 
+        style="position: fixed; bottom: 20px; left: 20px; z-index: 1050; border-radius: 50%; 
+               padding: 20px; width: 60px; height: 60px; display: flex; justify-content: center; align-items: center; 
+               background-image: url('logo.png'); background-size: cover; border: none;">
+</button>
 
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Contato</h5>
+            </div>
+            <div class="modal-body">
+                <!-- Formulário de contato -->
+                <form id="data-form" action="" method="post">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Nome</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Digite seu nome" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">E-mail</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Digite seu e-mail" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Telefone</label>
+                        <input type="tel" class="form-control" id="phone" name="phone_number" placeholder="Digite seu telefone" required>
+                        <small id="phoneError" class="text-danger d-none">Número de telefone inválido!</small>
+                    </div>
+                    <div class="mb-3">
+                        <label for="dropdown" class="form-label">Selecione uma opção</label>
+                        <select class="form-select" id="dropdown"  name="response" required>
+                            <option value="" disabled selected>Escolha uma opção</option>
+                            <option value="Visto D7">Visto D7</option>
+                            <option value="Visto D1">Visto D1</option>
+                            <option value="Visto D2">Visto D2</option>
+                            <option value="Visto Familia">Visto Familia</option>
+                            <option value="Visto Estudante">Visto Estudante</option>
+                            <option value="Visto Turista">Visto Turista</option>
+                            <option value="Visto Start Tup Visa">Visto Start Tup Visa</option>
+                            <option value="Certificados">Certificados</option>
+                            <option value="Autorização Residência CPLP">Autorização Residência CPLP</option>
+                            <option value="NIF">NIF</option>
+                            <option value="Inscrição em faculdade">Inscrição em faculdade</option>
+                            <option value="Reconhecimento online">Reconhecimento online</option>
+                            <option value="Marcações AIMA">Marcações AIMA</option>
+                            <option value="Nacionalidades">Nacionalidades</option>
+                            <option value="Abertura de conta bancária">Abertura de conta bancária</option>
+                            <option value="Segurança Social">Segurança Social</option>
+                            <option value="Outras Informações">Outras Informações</option>
+                        </select>
+                    </div>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary text-danger" data-dismiss="modal" aria-label="Close">Fechar</button>
+                <button type="submit" class="btn btn-primary"  onclick="submit()">Enviar</button>
+            </div>
+       
+        </div>
+    </div>
+</div>
+    <!-- Link para a biblioteca de telefone (intl-tel-input) -->
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.8/build/js/intlTelInput.min.js"></script>
 <!--[if lt IE 8]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
     your browser</a> to improve your experience.</p>
@@ -1628,8 +1693,11 @@
 
 
 </div>
+
 <!--//.LGX SITE CONTAINER-->
 <!-- *** ADD YOUR SITE SCRIPT HERE *** -->
+<!-- JS ARQUIVE MAIN - LOGIC API -->
+<script src="assets/js/main.js" ></script>
 <!-- JQUERY  -->
 <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
 
@@ -1679,7 +1747,33 @@
 <!-- CUSTOM SCRIPT  -->
 <script src="assets/js/custom.script.js"></script>
 
+<script src="assets/js/script.js"></script>
+    
 
+<script>$(document).ready(function () {
+    // Ao clicar no botão com id="openModal", abrir o modal com id="myModal"
+    $('#openModal').click(function () {
+        $('#myModal').modal('show');
+    });
+});</script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.8/build/css/intlTelInput.min.css">
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.8/build/js/intlTelInput.min.js"></script>
+<script>
+    const phoneInput = document.querySelector("#phone");
+    const iti = window.intlTelInput(phoneInput, {
+        initialCountry: "br",
+        preferredCountries: ["br", "us", "gb"],
+        separateDialCode: true,
+        utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.8/build/js/utils.js",
+    });
+</script>
+
+<script>    // Permitir apenas números no campo de telefone
+    phoneInput.addEventListener("input", function (e) {
+        phoneInput.value = phoneInput.value.replace(/[^0-9]/g, ""); // Remove caracteres não numéricos
+    });
+</script>
 
 
 
